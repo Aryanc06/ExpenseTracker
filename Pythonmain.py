@@ -19,6 +19,8 @@ engine = create_engine(
     }
 )
 
+create_tables()
+seed_categories()
 
 class User(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
@@ -242,6 +244,4 @@ def seed_categories():
             session.commit()
 
 if __name__ == '__main__':
-    create_tables()
-    seed_categories()
     app.run(debug=True)
