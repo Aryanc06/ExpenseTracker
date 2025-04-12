@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sora:wght@600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="\static\ethome.css">
+    <title>
+      Add expense
+    </title>
+  </head>
+  <body>
+    <div class="leftline">
+      <div class="tray">
+        <div class="icons">
+          <lord-icon
+            onclick="window.location.href='{{ url_for('login') }}'"
+            src="https://cdn.lordicon.com/kdduutaw.json"
+            trigger="hover"
+            stroke="bold"
+            colors="primary:#f0f0f5"
+            style="width:5rem;height:5rem">
+          </lord-icon>
+        </div>
+      </div>
+      <div class="tray2">
+        <div class="icons2">
+          <lord-icon
+            onclick="window.location.href='{{ url_for('ethome') }}'"
+            src="https://cdn.lordicon.com/dicvhxpz.json"
+            trigger="hover"
+            colors="primary:#f0f0f5"
+            style="width:5rem;height:5rem">
+          </lord-icon>
+        </div>
+      </div>
+      <div class="tray3">
+        <div class="icons3">
+          <lord-icon
+            onclick="window.location.href='{{ url_for('addexpense') }}'"
+            src="https://cdn.lordicon.com/tsrgicte.json"
+            trigger="hover"
+            stroke="bold"
+            colors="primary:#f0f0f5"
+            style="width:5rem;height:5rem">
+          </lord-icon>
+        </div>
+      </div>
+      <div class="tray4">
+        <div class="icons4">
+          <lord-icon
+            onclick="window.location.href='{{ url_for('search') }}'"
+            src="https://cdn.lordicon.com/fkdzyfle.json"
+            trigger="hover"
+            stroke="bold"
+            colors="primary:#f0f0f5"
+            style="width:5rem;height:5rem">
+          </lord-icon>
+        </div>
+      </div>
+    </div>
+    <div class="contai">
+      <div class="formcon">
+        <h2>Add New Expense ➕</h2>
+    
+        <form method="POST" action="/addexpense">
+          <div class="formgrp">
+            <label for="amount">Amount</label>
+            <input type="number" step="0.01" name="amount" id="amount" required />
+          </div>
+    
+          <div class="formgrp">
+            <label for="category">Category</label>
+            <select name="category_id" id="category" required>
+              <option value="1">Food</option>
+              <option value="2">Travel</option>
+              <option value="3">Subscription</option>
+              <option value="4">Shopping</option>
+              <option value="5">Other</option>
+            </select>
+          </div>
+          <div class="formgrp">
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" required />
+          </div>
+          <div class="formgrp">
+            <label for="description">Description</label>
+            <input type="text" name="description" id="description" placeholder="Optional..." />
+          </div>
+          <button type="submit">Add Expense ☑️</button>
+        </form>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="toast-message {{ category }}">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+      </div>  
+    </div>
+  </body>
+</html>

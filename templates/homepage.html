@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sora:wght@600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="static\homepage.css">
+    <title>
+      Homepage
+    </title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="textmain">
+        <h1>We track your expenses <br>So they stop ghosting you</h1>
+        <p>Start tracking where your money *actually* goes — because your bank account deserves better stories 😁.</p>
+        <div class="button-group">
+          <button onclick="window.location.href='/register'" class="reg">Get Started</button>
+          <button onclick="window.location.href='/login'" class="reg">Login</button>
+        </div>
+      </div>
+      <div class="piem">
+        <img src="static\graphu.png" alt="Pie Chart" class="pie" />
+      </div>
+    </div>
+    <div class="about">
+      <h3>
+        About Us (ExpenseTracker)
+      </h3>
+      <p>
+        Expense Tracker helps you take control of your finances with ease. 
+        Whether you're managing daily spending, tracking monthly bills, or planning savings, 
+        our simple and intuitive platform gives you a clear view of where your money goes. 
+        No clutter, no stress — just smart tools to make budgeting effortless and a little more fun.
+      </p>
+      <h2>
+        We'd love to hear from you 🥰
+      </h2>
+      <form class="about1" action="/feedback" method="POST">
+        <textarea name="feedback" id="text1" placeholder="Feedback" rows="2" cols="4"></textarea><br>
+        <button type="submit" class="sub">Submit</button>
+      </form>
+    </div>
+    <div class="lastima">
+      <lord-icon
+        onclick="window.open('https://www.instagram.com/ar_yawwn?igsh=MXZ0Zm5wZHVseGNkeg==', '_blank')"
+        src="https://cdn.lordicon.com/tgyvxauj.json"
+        trigger="hover"
+        stroke="bold"
+        colors="primary:#9cf4a7,secondary:#66eece"
+        style="width:2.8rem;height:auto">
+      </lord-icon>
+      <lord-icon
+        onclick="window.open('', '_blank')"
+        src="https://cdn.lordicon.com/yizwahhw.json"
+        trigger="hover"
+        stroke="bold"
+        colors="primary:#9cf4a7,secondary:#66eece"
+        style="width:2.8rem;height:auto">
+      </lord-icon>
+      <lord-icon
+      onclick="window.open('https://github.com/Aryanc06', '_blank')"
+        src="https://cdn.lordicon.com/jjxzcivr.json"
+        trigger="hover"
+        stroke="bold"
+        colors="primary:#9cf4a7,secondary:#66eece"
+        style="width:2.8rem;height:2.8rem">
+      </lord-icon>
+    </div>
+    <e class="copy">Copyright © 2025 Expense Tracker, Inc. All rights reserved.</e>
+  </body>
+</html>

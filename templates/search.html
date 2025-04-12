@@ -1,0 +1,142 @@
+<html>
+  <head>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sora:wght@600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="\static\ethome.css">
+    <title>
+      Expense Table
+    </title>
+    <script>
+      function showInputs() {
+          const value = document.getElementById('filter').value;
+          document.querySelectorAll('.formgrp').forEach(div => {div.style.display = 'none';});
+
+          if (value === 'category_id') {
+              document.getElementById('category-id').style.display = 'block';
+          } else if (value === 'date') {
+              document.getElementById('date-input').style.display = 'block';
+          } else if (value === 'amount') {
+              document.getElementById('amount-input').style.display = 'block';
+          } 
+      }
+    </script>
+  </head>
+  <body>
+    <div class="leftline">
+      <div class="tray">
+        <div class="icons">
+          <lord-icon
+            onclick="window.location.href='{{ url_for('login') }}'"
+            src="https://cdn.lordicon.com/kdduutaw.json"
+            trigger="hover"
+            stroke="bold"
+            colors="primary:#f0f0f5"
+            style="width:5rem;height:5rem">
+          </lord-icon>
+        </div>
+      </div>
+      <div class="tray2">
+        <div class="icons2">
+          <lord-icon
+            onclick="window.location.href='{{ url_for('ethome') }}'"
+            src="https://cdn.lordicon.com/dicvhxpz.json"
+            trigger="hover"
+            colors="primary:#f0f0f5"
+            style="width:5rem;height:5rem">
+          </lord-icon>
+        </div>
+      </div>
+      <div class="tray3">
+        <div class="icons3">
+          <lord-icon
+            onclick="window.location.href='{{ url_for('addexpense') }}'"
+            src="https://cdn.lordicon.com/tsrgicte.json"
+            trigger="hover"
+            stroke="bold"
+            colors="primary:#f0f0f5"
+            style="width:5rem;height:5rem">
+          </lord-icon>
+        </div>
+      </div>
+      <div class="tray4">
+        <div class="icons4">
+          <lord-icon
+            onclick="window.location.href='{{ url_for('search') }}'"
+            src="https://cdn.lordicon.com/fkdzyfle.json"
+            trigger="hover"
+            stroke="bold"
+            colors="primary:#f0f0f5"
+            style="width:5rem;height:5rem">
+          </lord-icon>
+        </div>
+      </div>
+    </div>
+    <div class="contai1">
+      <div class="formcon1">
+        <h2>Search for your Expenses 🔎</h2>
+        <form method="POST">
+          <div class="formgrp1">
+            <label>Select filter:</label>
+              <select id="filter" name="filter" onchange="showInputs()">
+                  <option value="">-- Select --</option>
+                  <option value="category_id">Category</option>
+                  <option value="date">Date Range</option>
+                  <option value="amount">Amount Range</option>
+              </select>
+          </div>
+          <div class="formgrp" id="category-id" style="display:none;">
+            <label for="category" >Category</label>
+            <select name="category_id" id="category-input">
+              <option value="1">Food</option>
+              <option value="2">Travel</option>
+              <option value="3">Subscription</option>
+              <option value="4">Shopping</option>
+              <option value="5">Other</option>
+            </select>
+          </div>
+          <div id="date-input" class="formgrp" style="display:none;">
+            <label>From:</label>
+            <input type="date" name="start_date">
+            <label>To:</label>
+            <input type="date" name="end_date">
+          </div>
+          <div id="amount-input" class="formgrp" style="display:none;">
+            <label>Min:</label>
+            <input type="number" name="minamt" step="0.01">
+            <label>Max:</label>
+            <input type="number" name="maxamt" step="0.01">
+          </div>
+          <button type="submit">Search</button>
+        </form>
+        <table class="etable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Amount</th>
+              <th>Category</th>
+              <th>Description</th>
+              <th>User</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% if expenses %}
+              {% for expense in expenses %}
+              <tr>
+                <td>{{ expense.id }}</td>
+                <td>₹ {{ expense.amount }}</td>
+                <td>{{ expense.category.name if expense.category else "Unknown" }}</td>
+                <td>{{ expense.description or "-" }}</td>
+                <td>{{ expense.username }}</td>
+                <td>{{ expense.expense_date }}</td>
+              </tr>
+              {% endfor %}
+            {% endif %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>   

@@ -1,0 +1,55 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Expense Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sora:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static\reg.css">
+</head>
+<body>
+  <div class="outerbox">
+    <h2>Welcome 😇</h2>
+    <div id="toast-wrapper">
+    </div>    
+    <form action="/register" method="POST">
+      <div class="innerbox">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="name" required />
+      </div>
+      <div class="innerbox">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="username" required />
+      </div>
+      <div class="innerbox">
+        <label>Gender</label>
+        <div class="radiogrp">
+          <label><input type="radio" name="gender" value="male" required> Male</label>
+          <label><input type="radio" name="gender" value="female" required> Female</label>
+        </div>
+      </div>
+      <div class="innerbox">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+      </div>
+      <div class="innerbox">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="********" required />
+      </div>
+      <div class="innerbox">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm" placeholder="********" required />
+      </div>
+      <button type="submit">Register</button>
+    </form>      
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="toast-message {{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <div class="foot">
+      Already have an account? <a href="/login">Login</a>
+    </div>
+  </div>
