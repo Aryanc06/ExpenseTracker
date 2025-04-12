@@ -7,8 +7,15 @@ from datetime import date
 app = Flask(__name__)
 app.secret_key = "Aryan@0606"
 
-DATABASE_URL = "mysql+mysqlconnector://aryan:Aryan%400606@localhost/expensetracker"
-engine = create_engine(DATABASE_URL, echo=True)
+DATABASE_URL = os.getenv("DATABASE_URL")
+engine = create_engine(
+    DATABASE_URL,
+    echo=True,
+    connect_args={
+        "ssl_disabled": False
+    }
+)
+
 
 class User(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
