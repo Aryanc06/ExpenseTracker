@@ -3,6 +3,9 @@ from sqlmodel import SQLModel, Field, Relationship, Session, create_engine, sele
 from sqlalchemy.orm import selectinload
 from typing import Optional, List
 from datetime import date
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
 app.secret_key = "Aryan@0606"
