@@ -8,6 +8,11 @@
     position: relative !important;
   }
 
+  .textmain {
+    max-width: 100% !important;
+    text-align: center;
+  }
+
   .leftline {
     display: none;
   }
@@ -44,11 +49,29 @@
     width: 100% !important;
   }
 
+  .about {
+    margin-top: 5rem !important;
+  }
+
+  .about p {
+    padding: 0 1rem;
+  }
+
   body {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
     margin-top: 2rem !important;
     align-items: center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about p {
+    padding: 0 1rem;
+  }
+
+  .about {
+    margin-top: 5rem !important;
   }
 }
 
@@ -78,6 +101,12 @@
   }
 }
 
+textarea {
+  min-width: 250px;
+  width: 100%;
+  max-width: 600px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -92,4 +121,3 @@ button:focus, input:focus, select:focus, textarea:focus {
   outline: none;
   box-shadow: 0 0 8px rgba(126, 237, 159, 0.5);
 }
-
