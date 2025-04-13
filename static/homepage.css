@@ -16,23 +16,6 @@
   margin: 0 auto;
 }
 
-
-.piem {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.pie {
-  margin-top: 5%;
-  max-width: 700px;
-  width: 100%;
-  height: auto;
-  border-radius: 2%;
-  box-shadow: 0 6px 20px rgba(195, 248, 220, 0.4)
-}
-
 body {
   margin: 0;
   padding: 0;
