@@ -1,110 +1,66 @@
 @media (max-width: 1024px) {
-  .main, .formcon, .formcon1, .contai, .contai1, .totalspend, .totalspend1 {
-    margin-left: 0 !important;
+  .contai {
     padding: 1rem !important;
+    margin: 0 auto !important;
     width: 100% !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    position: relative !important;
+    box-sizing: border-box;
   }
 
-  .textmain {
-    max-width: 100% !important;
-    text-align: center;
+  .formcon1 {
+    width: 100% !important;
+    padding: 1rem !important;
   }
 
-  .leftline {
-    display: none;
-  }
-
-  .tray, .tray1, .tray2, .tray3, .tray4 {
-    display: none;
+  .etable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
   }
 
   .etable th, .etable td {
-    font-size: 0.85rem;
-    padding: 0.5rem;
+    font-size: 0.9rem !important;
+    padding: 0.5rem !important;
   }
 
-  h1 {
-    font-size: 2.2rem !important;
-  }
-
-  p {
-    font-size: 1.2rem !important;
-  }
-
-  .button-group {
+  .totalspend, .totalspend1 {
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
+    width: 100% !important;
+    padding: 0.5rem 0;
   }
 
-  .reg, .button-group button, textarea {
+  .totalspend1 input {
     width: 100% !important;
     font-size: 1rem !important;
   }
 
-  .pie {
-    max-width: 100% !important;
+  .totalspend1 button {
     width: 100% !important;
+    margin-top: 0.5rem;
   }
 
-  .about {
-    margin-top: 5rem !important;
-  }
-
-  .about p {
-    padding: 0 1rem;
-  }
-
-  body {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-    margin-top: 2rem !important;
-    align-items: center !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .about p {
-    padding: 0 1rem;
-  }
-
-  .about {
-    margin-top: 5rem !important;
+  .leftline, .tray, .tray2, .tray3, .tray4 {
+    display: none;
   }
 }
 
 @media (max-width: 600px) {
   h2 {
-    font-size: 1.5rem !important;
+    font-size: 1.6rem !important;
   }
 
   .etable th, .etable td {
-    font-size: 0.75rem;
+    font-size: 0.75rem !important;
   }
 
-  input, select, textarea, button {
-    font-size: 0.9rem !important;
+  .totalspend h3 {
+    font-size: 1.1rem;
   }
 
-  .totalspend, .totalspend1 {
-    width: 100% !important;
+  input, button {
+    font-size: 1rem !important;
   }
-
-  .outerbox {
-    max-width: 90% !important;
-  }
-
-  .radiogrp {
-    flex-direction: column !important;
-  }
-}
-
-textarea {
-  min-width: 250px;
-  width: 100%;
-  max-width: 600px;
 }
 
 html {
