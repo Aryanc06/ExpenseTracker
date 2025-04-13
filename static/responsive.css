@@ -1,65 +1,112 @@
+/* Responsive styles across all views */
+
 @media (max-width: 1024px) {
-  .contai {
-    padding: 1rem !important;
-    margin: 0 auto !important;
-    width: 100% !important;
-    box-sizing: border-box;
-  }
-
-  .formcon1 {
-    width: 100% !important;
-    padding: 1rem !important;
-  }
-
-  .etable {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-    width: 100%;
-  }
-
-  .etable th, .etable td {
-    font-size: 0.9rem !important;
-    padding: 0.5rem !important;
-  }
-
-  .totalspend, .totalspend1 {
+  .main {
     flex-direction: column;
-    align-items: flex-start;
-    width: 100% !important;
-    padding: 0.5rem 0;
+    text-align: center;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
   }
 
-  .totalspend1 input {
+  .textmain {
+    max-width: 100% !important;
+    text-align: center;
+  }
+
+  .piem {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .pie {
+    max-width: 90%;
+    width: 100%;
+    height: auto;
+  }
+
+  body {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-top: 2rem !important;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    font-size: 1.2rem !important;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .reg {
+    width: 100%;
+    max-width: 300px;
+    font-size: 1.2rem !important;
+  }
+
+  .about {
+    margin-top: 5rem !important;
+    padding: 2rem;
+  }
+
+  .about p {
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+
+  textarea {
     width: 100% !important;
     font-size: 1rem !important;
   }
 
-  .totalspend1 button {
-    width: 100% !important;
-    margin-top: 0.5rem;
+  .lastima {
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
   }
 
-  .leftline, .tray, .tray2, .tray3, .tray4 {
-    display: none;
+  .copy {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 1rem;
   }
 }
 
 @media (max-width: 600px) {
   h2 {
-    font-size: 1.6rem !important;
+    font-size: 1.5rem !important;
   }
 
-  .etable th, .etable td {
+  .etable th,
+  .etable td {
     font-size: 0.75rem !important;
   }
 
-  .totalspend h3 {
-    font-size: 1.1rem;
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 0.9rem !important;
   }
 
-  input, button {
-    font-size: 1rem !important;
+  .outerbox {
+    max-width: 90% !important;
+    padding: 1.5rem;
+  }
+
+  .radiogrp {
+    flex-direction: column !important;
+    gap: 0.5rem;
   }
 }
 
@@ -67,13 +114,17 @@ html {
   scroll-behavior: smooth;
 }
 
-img, svg {
+img,
+svg {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-button:focus, input:focus, select:focus, textarea:focus {
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
   outline: none;
   box-shadow: 0 0 8px rgba(126, 237, 159, 0.5);
 }
