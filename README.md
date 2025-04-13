@@ -27,7 +27,7 @@ A simple Web app to manage your daily expenses 💸.
 ![Register](assets/screenshotreg.png)
 
 ### 🔐 Login
-![Login](assets/screenshotlog.png)
+![Login](assets/screenshotlogin.png)
 
 ### 📊 Dashboard
 ![Dashboard](assets/screenshotdashboard.png)
