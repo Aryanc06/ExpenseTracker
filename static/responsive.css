@@ -1,0 +1,95 @@
+@media (max-width: 1024px) {
+  .main, .formcon, .formcon1, .contai, .contai1, .totalspend, .totalspend1 {
+    margin-left: 0 !important;
+    padding: 1rem !important;
+    width: 100% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+  }
+
+  .leftline {
+    display: none;
+  }
+
+  .tray, .tray1, .tray2, .tray3, .tray4 {
+    display: none;
+  }
+
+  .etable th, .etable td {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 2.2rem !important;
+  }
+
+  p {
+    font-size: 1.2rem !important;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .reg, .button-group button, textarea {
+    width: 100% !important;
+    font-size: 1rem !important;
+  }
+
+  .pie {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  body {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-top: 2rem !important;
+    align-items: center !important;
+  }
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .etable th, .etable td {
+    font-size: 0.75rem;
+  }
+
+  input, select, textarea, button {
+    font-size: 0.9rem !important;
+  }
+
+  .totalspend, .totalspend1 {
+    width: 100% !important;
+  }
+
+  .outerbox {
+    max-width: 90% !important;
+  }
+
+  .radiogrp {
+    flex-direction: column !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button:focus, input:focus, select:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(126, 237, 159, 0.5);
+}
+
