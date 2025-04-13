@@ -1,16 +1,20 @@
 .main {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 3rem;
+  height: 100vh;
   width: 100%;
-  height: auto;
+  text-align: center;
+  padding: 2rem;
   box-sizing: border-box;
 }
 
-.textmain{
-  max-width: 50%;
+
+.textmain {
+  max-width: 800px;
+  margin: 0 auto;
 }
+
 
 .piem {
   flex: 1;
@@ -181,9 +185,15 @@ e{
   margin-bottom: 6rem;
 }
 
-.copy{
-  font-family: 'Inter', sans-serif;
+.copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
   font-size: 1rem;
-  margin-bottom: 1rem;
   color: #ffffff;
+  background-color: transparent;
 }
+
