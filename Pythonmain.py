@@ -197,8 +197,11 @@ def search():
             results = []
         
     return render_template("search.html", expenses=results)
-        
 
+@app.route('/view-docx')
+def view_docx():
+    return render_template('view_docx.html')
+        
 @app.route('/addexpense', methods=['GET', 'POST'])
 def addexpense():
     if request.method == "POST":
